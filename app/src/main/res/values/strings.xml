@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Upgur</string>
+    <string name="app_name_stylized">upgur</string>
+
+    <!-- Common Strings -->
+    <string name="title_common_untitled">Untitled</string>
+    <string name="action_common_retry">Retry</string>
+
+    <!-- Login Strings -->
+    <string name="action_login_sign_with_imgur">Sign In with Imgur</string>
+    <string name="label_login_cant_sign_in">Can\'t sign in</string>
+    <string name="message_login_cant_sign_in">Please make sure you allow Upgur access to your account and try again</string>
+
+    <!-- Albums Page Strings -->
+    <string name="title_albums_reference">Albums</string>
+    <string name="label_albums_cant_load">Can\'t load albums</string>
+    <string name="message_albums_cant_load">There was an error loading albums. Please try again later.</string>
+    <string name="label_albums_no_items">No albums</string>
+    <string name="message_albums_no_items">Would suggest adding one but we didn\'t implement functionality</string>
+    <plurals name="label_albums_image_count">
+        <item quantity="one">%d image</item>
+        <item quantity="other">%d images</item>
+    </plurals>
+
+    <!-- Album Details Page Strings -->
+    <string name="title_album_reference">Album</string>
+    <string name="label_album_cant_load">Can\'t load images</string>
+    <string name="message_album_cant_load">There was an error loading images. Please try again later.</string>
+    <string name="label_album_no_items">No images</string>
+    <string name="message_album_no_items">This album seems to be empty. Why not add some images using the <b>+</b> button?</string>
+    <string name="action_album_sort">Sort</string>
+    <string name="label_album_sort_option_ascending">Oldest First</string>
+    <string name="label_album_sort_option_descending">Newest First</string>
+    <string name="label_album_upload_error">Upload Error</string>
+
+    <!-- Non-UI -->
+    <string name="fab_scroll_aware_behavior">dev.ihsan.upgur.ui.widget.ScrollAwareFabBehavior</string>
+</resources>

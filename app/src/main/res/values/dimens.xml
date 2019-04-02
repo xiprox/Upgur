@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <!-- 1dp of outer stroke on cards makes the space in between look like 10dp, se we subtract that here -->
+    <dimen name="album_grid_spacing">3dp</dimen>
+    <dimen name="corner_radius">12dp</dimen>
+</resources>

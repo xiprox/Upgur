@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.albums.AlbumsFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="164dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/toolbarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+                app:title="@string/title_album_reference"
+                app:fontFamily="@font/nunito_bold"
+                app:collapsedTitleTextAppearance="@style/TextAppearance.AppTheme.CollapsingToolbar.Collapsed"
+                app:expandedTitleTextAppearance="@style/TextAppearance.AppTheme.CollapsingToolbar.Expanded">
+
+            <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    app:layout_collapseMode="pin"
+                    android:theme="@style/AppTheme.Toolbar"
+                    app:menu="@menu/menu_album_details"/>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <dev.ihsan.upgur.ui.widget.LceeView
+                android:id="@+id/lceeView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2"
+                    android:padding="4dp"
+                    android:clipToPadding="false"/>
+
+            <tr.xip.errorview.ErrorView
+                    android:id="@+id/errorView"
+                    android:padding="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:ev_title="@string/label_album_cant_load"
+                    app:ev_subtitle="@string/message_album_cant_load"
+                    android:layout_gravity="center"
+                    android:theme="@style/AppTheme.ErrorView"/>
+
+            <tr.xip.errorview.ErrorView
+                    android:padding="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:ev_image="@drawable/ic_empty_state_100dp"
+                    app:ev_title="@string/label_album_no_items"
+                    app:ev_subtitle="@string/message_album_no_items"
+                    app:ev_retryVisible="false"
+                    android:layout_gravity="center"
+                    android:theme="@style/AppTheme.ErrorView"/>
+        </dev.ihsan.upgur.ui.widget.LceeView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/errorBottomSheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="?colorSurface"
+            app:layout_behavior="@string/bottom_sheet_behavior"
+            app:behavior_hideable="true"
+            app:elevation="16dp"
+            app:behavior_skipCollapsed="true"
+            android:clickable="true">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/label_album_upload_error"
+                android:textSize="20sp"
+                android:fontFamily="@font/nunito_bold"
+                android:textColor="@android:color/black"
+                android:layout_height="wrap_content"/>
+
+        <Space
+                android:layout_width="0dp"
+                android:layout_height="8dp"/>
+
+        <TextView
+                android:id="@+id/errorMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <Space
+                android:layout_width="0dp"
+                android:layout_height="8dp"/>
+
+        <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:id="@+id/retryButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:backgroundTint="@android:color/black"
+                android:textColor="@android:color/white"
+                android:text="@string/action_common_retry"
+                app:rippleColor="@android:color/white"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
+            android:id="@+id/uploadButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:srcCompat="@drawable/ic_add_white_24dp"
+            app:layout_behavior="@string/fab_scroll_aware_behavior"
+            app:layout_anchor="@+id/errorBottomSheet"
+            app:layout_anchorGravity="top|end"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

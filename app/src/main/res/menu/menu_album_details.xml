@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+            android:id="@+id/action_sort"
+            app:showAsAction="always"
+            android:icon="@drawable/ic_sort_black_24dp"
+            android:title="@string/action_album_sort">
+
+        <menu>
+            <item
+                    android:id="@+id/action_sort_descending"
+                    android:title="@string/label_album_sort_option_descending"/>
+            <item
+                    android:id="@+id/action_sort_ascending"
+                    android:title="@string/label_album_sort_option_ascending"/>
+        </menu>
+    </item>
+</menu>

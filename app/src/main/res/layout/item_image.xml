@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content"
+                                                   app:cardElevation="0dp"
+                                                   app:cardCornerRadius="@dimen/corner_radius"
+                                                   app:strokeWidth="1dp"
+                                                   app:strokeColor="@color/colorCardStroke">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:viewAspectRatio="1.0"
+            android:background="@color/colorImageBackground"
+            app:placeholderImage="@drawable/ic_placeholder"
+            app:placeholderImageScaleType="center"
+            app:roundedCornerRadius="@dimen/corner_radius"/>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/uploadingOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:viewAspectRatio="1.0"
+            app:placeholderImage="@drawable/overlay_image_uploading"
+            app:roundedCornerRadius="@dimen/corner_radius"/>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/errorOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:viewAspectRatio="1.0"
+            app:placeholderImage="@drawable/overlay_image_error"
+            app:roundedCornerRadius="@dimen/corner_radius"/>
+
+    <LinearLayout
+            android:id="@+id/statusIndicatorContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="invisible"
+            android:layout_gravity="bottom|start"
+            android:gravity="center_vertical"
+            android:layout_margin="10dp">
+
+        <ImageView
+                android:id="@+id/statusIndicatorIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="26dp"
+                android:layout_height="8dp"
+                android:layout_marginTop="4dp"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:theme="@style/ProgressBarImageItem"
+                tools:progress="50"/>
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

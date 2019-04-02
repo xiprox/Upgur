@@ -1,0 +1,70 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorSurface">@color/colorSurface</item>
+        <item name="android:buttonStyle">@style/AppTheme.Button</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="colorAccent">@android:color/black</item>
+    </style>
+
+    <style name="AppTheme.FloatingActionButton">
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item>
+        <item name="android:tint">@android:color/white</item>
+        <item name="rippleColor">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.Toolbar" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="colorControlNormal">@android:color/black</item>
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="titleTextColor">@android:color/black</item>
+        <item name="fontFamily">@font/nunito_bold</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.Button" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@android:color/black</item>
+        <item name="colorButtonNormal">@android:color/black</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="rippleColor">@android:color/white</item>
+    </style>
+
+    <style name="ProgressBarImageItem">
+        <item name="colorAccent">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.ErrorView">
+        <item name="ev_image">@drawable/ic_error_100dp</item>
+        <item name="ev_retryColor">@android:color/black</item>
+    </style>
+
+    <style name="TextAppearance.AppTheme.CollapsingToolbar.Collapsed"
+           parent="TextAppearance.AppCompat.Title">
+        <item name="fontFamily">@font/nunito_bold</item>
+    </style>
+
+    <style name="TextAppearance.AppTheme.CollapsingToolbar.Expanded"
+           parent="TextAppearance.Design.CollapsingToolbar.Expanded">
+        <item name="fontFamily">@font/nunito_bold</item>
+    </style>
+
+</resources>
